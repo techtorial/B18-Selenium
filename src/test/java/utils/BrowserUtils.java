@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.util.Set;
+
 public class BrowserUtils {
 
     public static String getText(WebElement element){
@@ -40,6 +42,16 @@ public class BrowserUtils {
     public static void scrollIntoView(WebDriver driver,WebElement element){
         JavascriptExecutor js= (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true)",element);
+    }
+
+    public static void switchWindow(WebDriver driver,String title){
+        Set<String> allPagesId=driver.getWindowHandles();//4 ids
+        for(String pageId:allPagesId){
+            driver.switchTo().window(pageId);
+            if(driver.getTitle().contains(title)){
+                break;
+            }
+        }
     }
 
 
