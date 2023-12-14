@@ -3,12 +3,7 @@ package com.test.bank.tests;
 import com.test.bank.pages.BankCustomerPage;
 import com.test.bank.pages.BankLoginPage;
 import com.test.bank.pages.BankManagerPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
-
 public class BankCustomerTest extends BankTestBase {
 
     @Test

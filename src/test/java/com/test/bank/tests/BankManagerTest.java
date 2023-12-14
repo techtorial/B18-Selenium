@@ -5,6 +5,7 @@ import com.test.bank.pages.BankManagerPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import utils.ConfigReader;
 
 import java.time.Duration;
 
@@ -19,7 +20,8 @@ public class BankManagerTest extends BankTestBase{
         BankLoginPage bankLoginPage=new BankLoginPage(driver);
         bankLoginPage.clickManagerLogin();
         BankManagerPage bankManagerPage=new BankManagerPage(driver);
-        bankManagerPage.addCustomerFunctionality(driver,"Ahmet","Baldir","52454", "Customer added successfully");
+        bankManagerPage.addCustomerFunctionality(driver, ConfigReader.readProperty("bankFirstName"),
+                ConfigReader.readProperty("bankLastName"),ConfigReader.readProperty("bankZipCode"), "Customer added successfully");
     }
 
     @Test
