@@ -27,7 +27,7 @@ public class BankCustomerPage {
     WebElement depositButton;
     @FindBy(xpath = "//input[@placeholder='amount']")
     WebElement amount;
-    @FindBy(xpath = "//button[@type='submit']")
+    @FindBy(xpath = "//button[@type='submit'] ")
     WebElement submitButton;
     @FindBy(xpath = "//span[@ng-show='message']")
     WebElement message;
