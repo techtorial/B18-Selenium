@@ -25,7 +25,7 @@ public class BankCustomerPage {
     WebElement currency;
     @FindBy(xpath = "//button[contains(text(),'Deposit')]")
     WebElement depositButton;
-    @FindBy(xpath = "//input[@placeholder='amount']")
+    @FindBy(xpath = "//input[@placeholder='amount'] ")
     WebElement amount;
     @FindBy(xpath = "//button[@type='submit'] ")
     WebElement submitButton;
