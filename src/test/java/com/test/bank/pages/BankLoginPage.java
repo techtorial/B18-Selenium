@@ -15,7 +15,7 @@ public class BankLoginPage {
 
     @FindBy(xpath = "//strong")
     WebElement header;
-    @FindBy(xpath = "//button[.='Customer Login']")
+    @FindBy(xpath = "//button[.='Customer Login'] ")
     WebElement customerLoginButton;
 
     @FindBy(xpath = "//button[.='Bank Manager Login']")
