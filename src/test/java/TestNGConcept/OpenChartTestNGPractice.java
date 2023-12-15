@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.ConfigReader;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -29,11 +30,11 @@ public class OpenChartTestNGPractice {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://demo.opencart.com/admin/");
+        driver.get(ConfigReader.readProperty("opencharturl"));
         WebElement username=driver.findElement(By.cssSelector("#input-username"));
-        username.sendKeys("demo");
+        username.sendKeys(ConfigReader.readProperty("openchartusername"));
         WebElement password=driver.findElement(By.cssSelector("#input-password"));
-        password.sendKeys("demo");
+        password.sendKeys(ConfigReader.readProperty("openchartpassword"));
         WebElement loginButton=driver.findElement(By.cssSelector(".btn-primary"));
         loginButton.click();
         Thread.sleep(2000);
