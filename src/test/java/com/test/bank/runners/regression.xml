@@ -3,6 +3,22 @@
 <suite name="Regression Suite">
 
     <test name="Bank Tests">
+        <parameter name="header" value="XYZ Bank"> </parameter>
+        <parameter name="url" value="https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login"> </parameter>
+        <parameter name="firstName" value="Ahmet"> </parameter>
+        <parameter name="lastName" value="Baldir"> </parameter>
+        <parameter name="zipCode" value="52454"> </parameter>
+        <parameter name="expectedMessageCustomer" value="Customer added successfully"> </parameter>
+        <parameter name="fullName" value="Ahmet Baldir"> </parameter>
+        <parameter name="currency" value="Dollar"> </parameter>
+        <parameter name="expectedMessageAccount" value="Account created successfully with account Number :"> </parameter>
+        <parameter name="expectedHeader" value="Welcome Ahmet Baldir !!"> </parameter>
+        <parameter name="expectedBalance" value="0"> </parameter>
+        <parameter name="depositAmount" value="500"> </parameter>
+        <parameter name="expectedMessageDeposit" value="Deposit Successful"> </parameter>
+        <parameter name="expectedColor" value="rgba(255, 0, 0, 1)"> </parameter>
+        <parameter name="expectedWithdrawal" value="300"> </parameter>
+        <parameter name="expectedMessageWithDraw" value="Transaction successful"> </parameter>
 
         <classes>
             <class name="com.test.bank.tests.BankLoginTest"> </class>

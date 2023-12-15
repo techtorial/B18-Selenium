@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Parameter Practice">
+
+    <test name="Practice">
+        <parameter name="firstName" value="Ahmet"> </parameter>
+        <parameter name="country" value="Turkiye"> </parameter>
+        <parameter name="city" value="Ankara"> </parameter>
+        <parameter name="zipCode" value="12345"> </parameter>
+        <classes>
+            <class name="TestNGConcept.ParameterAnnotation"> </class>
+        </classes>
+
+    </test>
+
+</suite>

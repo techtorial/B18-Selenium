@@ -44,9 +44,7 @@ public class BankManagerPage {
     public void addCustomerFunctionality(WebDriver driver,String firstName,String lastName,String zipCode,
                                         String expectedMessage) throws InterruptedException {
         addCustomerButton.click();
-        Thread.sleep(5000);
         this.firstName.sendKeys(firstName);
-        Thread.sleep(5000);
         this.lastName.sendKeys(lastName);
         this.zipCode.sendKeys(zipCode);
         addCustomerSubmit.submit();
