@@ -20,6 +20,7 @@
         <parameter name="expectedWithdrawal" value="300"> </parameter>
         <parameter name="expectedMessageWithDraw" value="Transaction successful"> </parameter>
 
+
         <classes>
             <class name="com.test.bank.tests.BankLoginTest"> </class>
             <class name="com.test.bank.tests.BankManagerTest"> </class>

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression Suite">
+
+    <test name="Test">
+        <parameter name="search" value="Fish for Dinner"> </parameter>
+        <parameter name="expectedHeader" value="6-Ingredient Roasted Salmon Fillets"> </parameter>
+
+        <classes>
+            <class name="com.test.spruce.tests.SpruceSeaFoodTest"> </class>
+        </classes>
+
+    </test>
+
+</suite>
