@@ -14,9 +14,12 @@ public class SauceLoginTest extends SauceLabTestBase{
         Assert.assertEquals(driver.getTitle(),expectedTitle);
     }
 
-    @Test
-    public void validateNegativeLogin(){
-
+    @Test(dataProvider = "negativeLogin",dataProviderClass = SauceAllData.class)
+    public void validateNegativeLogin(String username,String password,String expectedMessage) throws InterruptedException {
+        SauceLoginPage sauceLoginPage=new SauceLoginPage(driver);
+        sauceLoginPage.login(username,password);
+        Assert.assertEquals(sauceLoginPage.errorMessage(),expectedMessage);
     }
+
 
 }

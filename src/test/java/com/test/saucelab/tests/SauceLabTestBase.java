@@ -23,6 +23,6 @@ public class SauceLabTestBase {
         if(!iTestResult.isSuccess()){
             BrowserUtils.getScreenShot(driver,"sauce");
         }
-//        driver.quit();
+        driver.quit();
     }
 }
